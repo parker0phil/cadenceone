@@ -2,6 +2,8 @@ package com.cadenceone.eqhs;
 
 import org.junit.Test;
 
+import com.cadenceone.eqhs.fixtures.ObjectEqualsHashcodeFixtures;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
