@@ -1,0 +1,20 @@
+assert gradle.gradleVersion >= '0.9.1'
+
+allprojects {
+  group = 'com.cadenceone'
+  
+ repositories {
+   	mavenCentral()
+  }
+}
+
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	configurations.compile.transitive = false
+  	sourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_6
+  	targetCompatibility = org.gradle.api.JavaVersion.VERSION_1_6
+}
+
+
+
