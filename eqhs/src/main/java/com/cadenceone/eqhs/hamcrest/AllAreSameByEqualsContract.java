@@ -12,17 +12,19 @@ import com.cadenceone.eqhs.MultipleEqualsAndHashcodeContractChecker;
 
 public class AllAreSameByEqualsContract<E> extends TypeSafeMatcher<Collection<E>>{
    
-    @Override
-    public void describeTo(Description description) {
-        // TODO Auto-generated method stub
-        
-    }
+
+
 
     @Override
     protected boolean matchesSafely(Collection<E> item) {
         return new MultipleEqualsAndHashcodeContractChecker(item).allAreSameByEqualsContract();
     }
-    
+
+    @Override
+    protected void describeMismatchSafely(Collection<E> item, Description mismatchDescription) {
+        mismatchDescription.appendText("at least two objects are NOT equal or have different hashcodes, should be equal and have same hashcode");
+    }
+
     /**
      * Does every item in collection equals each other and have same hashcode
      * 
@@ -37,4 +39,7 @@ public class AllAreSameByEqualsContract<E> extends TypeSafeMatcher<Collection<E>
     }
 
 
+    public void describeTo(Description description) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

@@ -1,8 +1,7 @@
 package com.cadenceone.eqhs;
 
+import com.cadenceone.eqhs.fixtures.Fixtures;
 import org.junit.Test;
-
-import com.cadenceone.eqhs.fixtures.ObjectEqualsHashcodeFixtures;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -13,7 +12,7 @@ public class MutualEqualsAndHashcodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnEquals_thenReturnTrue(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndSameHashcode(), new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(true));        
@@ -22,7 +21,7 @@ public class MutualEqualsAndHashcodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnNotEquals_thenReturnFalse(){              
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new ObjectEqualsHashcodeFixtures.ObjectReturnsFalseAndSameHashcode(), new ObjectEqualsHashcodeFixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashcode(), new Fixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -31,7 +30,7 @@ public class MutualEqualsAndHashcodeContractCheckerTest {
     @Test
     public void givenTwoObjectsWithOnlyLeftReturningEquals_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndSameHashcode(), new ObjectEqualsHashcodeFixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -40,7 +39,7 @@ public class MutualEqualsAndHashcodeContractCheckerTest {
     @Test
     public void givenTwoObjectsWithOnlyRightReturningEquals_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new ObjectEqualsHashcodeFixtures.ObjectReturnsFalseAndSameHashcode(), new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -49,7 +48,7 @@ public class MutualEqualsAndHashcodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnEqualsButWithDifferentHashCodes_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndSameHashcode(), new ObjectEqualsHashcodeFixtures.ObjectReturnsTrueAndDifferentHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashcodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndDifferentHashcode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        

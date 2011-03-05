@@ -57,6 +57,19 @@ public class MultipleEqualsAndHashcodeContractCheckerTest {
         verify(checker1).areSameByEqualsContract();
         verify(checker2).areSameByEqualsContract();
     }
+
+    @Test
+    public void givenSomeCheckers_whenAllAreDifferentByEqualsContract_thenAreDifferentByEqualsContractIsCalledOnAllMethods(){
+        MutualEqualsAndHashcodeContractChecker checker1 = mock(MutualEqualsAndHashcodeContractChecker.class);
+        MutualEqualsAndHashcodeContractChecker checker2 = mock(MutualEqualsAndHashcodeContractChecker.class);
+        when(checker1.areDifferentByEqualsContract()).thenReturn(true);
+        when(checker2.areDifferentByEqualsContract()).thenReturn(true);
+
+        new MultipleEqualsAndHashcodeContractChecker(Arrays.asList(checker1, checker2)).allAreDifferentByEqualsContract();
+
+        verify(checker1).areDifferentByEqualsContract();
+        verify(checker2).areDifferentByEqualsContract();
+    }
     
     
 }

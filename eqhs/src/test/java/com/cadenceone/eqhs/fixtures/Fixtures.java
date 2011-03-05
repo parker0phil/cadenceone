@@ -1,6 +1,6 @@
 package com.cadenceone.eqhs.fixtures;
 
-public class ObjectEqualsHashcodeFixtures {
+public class Fixtures {
 
     public static class ObjectReturnsTrueAndSameHashcode{
         @Override

@@ -51,4 +51,13 @@ public class MultipleEqualsAndHashcodeContractChecker {
         }
         return true;
     }
+
+    public boolean allAreDifferentByEqualsContract() {
+        for(MutualEqualsAndHashcodeContractChecker it: checkers){
+            if (!it.areDifferentByEqualsContract()){
+                return false;
+            }
+        }
+        return true;
+    }
 }
