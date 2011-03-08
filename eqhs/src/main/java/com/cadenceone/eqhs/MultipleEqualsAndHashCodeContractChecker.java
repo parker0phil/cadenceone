@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class MultipleEqualsAndHashcodeContractChecker {
+public class MultipleEqualsAndHashCodeContractChecker {
     
     private List<MutualEqualsAndHashcodeContractChecker> checkers = new ArrayList<MutualEqualsAndHashcodeContractChecker>();
     
@@ -27,15 +27,15 @@ public class MultipleEqualsAndHashcodeContractChecker {
          return checkers;
     }
     
-    public MultipleEqualsAndHashcodeContractChecker(Object...objects){
+    public MultipleEqualsAndHashCodeContractChecker(Object... objects){
         this.checkers = generateCheckers(Arrays.asList(objects));
     }
     
-    public MultipleEqualsAndHashcodeContractChecker(Collection objects){
+    public MultipleEqualsAndHashCodeContractChecker(Collection objects){
         this.checkers = generateCheckers(objects);
     }
     
-    public MultipleEqualsAndHashcodeContractChecker(List<MutualEqualsAndHashcodeContractChecker> checkers){
+    public MultipleEqualsAndHashCodeContractChecker(List<MutualEqualsAndHashcodeContractChecker> checkers){
         this.checkers = checkers;
     }
     
@@ -60,4 +60,15 @@ public class MultipleEqualsAndHashcodeContractChecker {
         }
         return true;
     }
+
+    public boolean allHaveDifferentHashCodes() {
+        for(MutualEqualsAndHashcodeContractChecker it: checkers){
+            if (!it.haveDifferentHashCodes()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }

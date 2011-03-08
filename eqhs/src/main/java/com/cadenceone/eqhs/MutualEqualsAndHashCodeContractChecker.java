@@ -1,11 +1,11 @@
 package com.cadenceone.eqhs;
 
-public class MutualEqualsAndHashcodeContractChecker {
+public class MutualEqualsAndHashCodeContractChecker {
 
     private final Object leftObject;
     private final Object rightObject;
 
-    public MutualEqualsAndHashcodeContractChecker(Object leftObject, Object rightObject) {
+    public MutualEqualsAndHashCodeContractChecker(Object leftObject, Object rightObject) {
         this.leftObject = leftObject;
         this.rightObject = rightObject;
     }
@@ -24,5 +24,9 @@ public class MutualEqualsAndHashcodeContractChecker {
     
     private boolean haveSameHashCode() {
         return leftObject.hashCode() == rightObject.hashCode();
+    }
+
+    public boolean haveDifferentHashCodes() {
+        return !haveSameHashCode();
     }
 }
