@@ -12,7 +12,7 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnEquals_thenReturnTrue(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndSameHashCode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(true));        
@@ -21,7 +21,7 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnNotEquals_thenReturnFalse(){              
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashcode(), new Fixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashCode(), new Fixtures.ObjectReturnsFalseAndSameHashCode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -30,7 +30,7 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsWithOnlyLeftReturningEquals_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsFalseAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsFalseAndSameHashCode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -39,7 +39,7 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsWithOnlyRightReturningEquals_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsFalseAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndSameHashCode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
@@ -48,16 +48,17 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsThatBothReturnEqualsButWithDifferentHashCodes_thenReturnFalse(){               
         //execute
-        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndDifferentHashcode()).areSameByEqualsContract();
+        boolean areEqualsByContract = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndDifferentHashCode()).areSameByEqualsContract();
         
         //assert
         assertThat(areEqualsByContract, is(false));        
     }
 
+
     @Test
     public void givenTwoObjectsWithDifferentHashCodes_thenReturnTrue(){
         //execute
-        boolean haveDifferentHashCodes = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode()).haveDifferentHashCodes();
+        boolean haveDifferentHashCodes = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndSameHashCode()).haveDifferentHashCodes();
 
         //assert
         assertThat(haveDifferentHashCodes, is(false));
@@ -66,11 +67,13 @@ public class MutualEqualsAndHashCodeContractCheckerTest {
     @Test
     public void givenTwoObjectsWithSameHashCodes_thenReturnTrue(){
         //execute
-        boolean haveDifferentHashCodes = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndDifferentHashcode()).haveDifferentHashCodes();
+        boolean haveDifferentHashCodes = new MutualEqualsAndHashCodeContractChecker(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndDifferentHashCode()).haveDifferentHashCodes();
 
         //assert
         assertThat(haveDifferentHashCodes, is(true));
     }
+
+
 
 }
 

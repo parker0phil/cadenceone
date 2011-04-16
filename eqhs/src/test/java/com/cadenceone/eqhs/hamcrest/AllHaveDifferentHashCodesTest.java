@@ -1,42 +1,40 @@
 package com.cadenceone.eqhs.hamcrest;
 
 import com.cadenceone.eqhs.fixtures.Fixtures;
-
+import com.cadenceone.eqhs.fixtures.hamcrest.AbstractMatcherTest;
 import org.hamcrest.Matcher;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
 
+import static com.cadenceone.eqhs.hamcrest.AllHaveDifferentHashCodes.allHaveDifferentHashCodes;
 import static java.util.Arrays.asList;
-import static com.cadenceone.eqhs.hamcrest.AllAreDifferentByEqualsContract.allAreDifferentByEqualsContract;
 
 
 public class AllHaveDifferentHashCodesTest extends AbstractMatcherTest {
 
     @Test
-    public void testMatchesWhenAllAreNotEqual() {
+    public void testMatchesWhenAllHaveDifferentHashCodes() {
         assertMatches("matcher fails and should succeed",
-            allAreDifferentByEqualsContract(),
-            asList(new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsFalseAndSameHashcode()));
+            allHaveDifferentHashCodes(),
+            asList(new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsTrueAndDifferentHashCode()));
     }
 
     @Test
-    @Ignore
-    public void testDoesNotMatchWhenAllAreNotEqual() {
-        List<Object> objects = asList((Object)new Fixtures.ObjectReturnsTrueAndSameHashcode(), new Fixtures.ObjectReturnsTrueAndSameHashcode());
+    public void testDoesNotMatchWhenAllDonthaveDifferentHashCode() {
+        List<Object> objects = asList((Object)new Fixtures.ObjectReturnsTrueAndSameHashCode(), new Fixtures.ObjectReturnsFalseAndSameHashCode());
 
         assertDoesNotMatch("matcher succeeds and should fail",
-            allAreDifferentByEqualsContract(),
+            allHaveDifferentHashCodes(),
             objects);
 
-        assertMismatchDescription("at least two collection objects are equal, should be different",
-            allAreDifferentByEqualsContract(),
+        assertMismatchDescription("at least two collection objects have same hashCode, should all be different",
+            allHaveDifferentHashCodes(),
             objects);
      }
 
     protected Matcher<?> createMatcher() {
-        return allAreDifferentByEqualsContract();
+        return allHaveDifferentHashCodes();
     }
 
 
