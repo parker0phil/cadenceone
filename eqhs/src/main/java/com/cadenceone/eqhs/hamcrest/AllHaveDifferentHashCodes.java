@@ -18,7 +18,7 @@ public class AllHaveDifferentHashCodes<E> extends TypeSafeMatcher<Collection<E>>
 
     @Override
     protected void describeMismatchSafely(Collection<E> item, Description mismatchDescription) {
-        mismatchDescription.appendText("at least two collection objects have same hashCode, should be different");
+        mismatchDescription.appendText("at least two collection objects have same hashCode, should all be different");
     }
 
     /**

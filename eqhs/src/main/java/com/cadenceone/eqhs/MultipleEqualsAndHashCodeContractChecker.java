@@ -7,17 +7,17 @@ import java.util.List;
 
 public class MultipleEqualsAndHashCodeContractChecker {
     
-    private List<MutualEqualsAndHashcodeContractChecker> checkers = new ArrayList<MutualEqualsAndHashcodeContractChecker>();
+    private List<MutualEqualsAndHashCodeContractChecker> checkers = new ArrayList<MutualEqualsAndHashCodeContractChecker>();
     
-    private List<MutualEqualsAndHashcodeContractChecker> generateCheckers(Collection objects){
-        List<MutualEqualsAndHashcodeContractChecker> checkers = new ArrayList<MutualEqualsAndHashcodeContractChecker>();
+    private List<MutualEqualsAndHashCodeContractChecker> generateCheckers(Collection objects){
+        List<MutualEqualsAndHashCodeContractChecker> checkers = new ArrayList<MutualEqualsAndHashCodeContractChecker>();
         if (objects.size() < 2) throw new IllegalArgumentException("Must provide more two or more objects to generate checkers from.");      
         int leftCount = 0;
         int rightCount = 0;
          for(Object left: objects){           
              for(Object right: objects){  
                  if (leftCount != rightCount && rightCount > leftCount){
-                     checkers.add(new MutualEqualsAndHashcodeContractChecker(left, right));
+                     checkers.add(new MutualEqualsAndHashCodeContractChecker(left, right));
                  }
                  rightCount++;
              }
@@ -35,16 +35,16 @@ public class MultipleEqualsAndHashCodeContractChecker {
         this.checkers = generateCheckers(objects);
     }
     
-    public MultipleEqualsAndHashCodeContractChecker(List<MutualEqualsAndHashcodeContractChecker> checkers){
+    public MultipleEqualsAndHashCodeContractChecker(List<MutualEqualsAndHashCodeContractChecker> checkers){
         this.checkers = checkers;
     }
     
-    public List<MutualEqualsAndHashcodeContractChecker> getCheckers(){
+    public List<MutualEqualsAndHashCodeContractChecker> getCheckers(){
         return checkers;          
     }
     
     public boolean allAreSameByEqualsContract(){
-        for(MutualEqualsAndHashcodeContractChecker it: checkers){ 
+        for(MutualEqualsAndHashCodeContractChecker it: checkers){
             if (!it.areSameByEqualsContract()){
                 return false;
             }
@@ -53,7 +53,7 @@ public class MultipleEqualsAndHashCodeContractChecker {
     }
 
     public boolean allAreDifferentByEqualsContract() {
-        for(MutualEqualsAndHashcodeContractChecker it: checkers){
+        for(MutualEqualsAndHashCodeContractChecker it: checkers){
             if (!it.areDifferentByEqualsContract()){
                 return false;
             }
@@ -62,7 +62,7 @@ public class MultipleEqualsAndHashCodeContractChecker {
     }
 
     public boolean allHaveDifferentHashCodes() {
-        for(MutualEqualsAndHashcodeContractChecker it: checkers){
+        for(MutualEqualsAndHashCodeContractChecker it: checkers){
             if (!it.haveDifferentHashCodes()){
                 return false;
             }

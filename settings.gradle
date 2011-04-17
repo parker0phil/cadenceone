@@ -1,4 +1,5 @@
 rootProject.name = "cadenceone"
 
 include "eqhs"
+include "QueryString"
 

@@ -8,60 +8,58 @@ import java.util.*;
 
 public class QueryStringBuilder {
 
-    private URL url;
-    private final Map<String, List<String>> params = new TreeMap<String, List<String>>();
+	private transient URL existingUrl;
 
-    public QueryStringBuilder(URL url) {
-        this.url = url;
-    }
+	public QueryStringBuilder(final URL existingUrl) {
+		this.existingUrl = existingUrl;
+	}
 
-    public URL build() {
-        if (params.isEmpty()){
-                return url;
-        }
-        return addParamsToUrl(params, url);
+	public QueryStringBuilder addParam(final String paramaterName, final String... paramaterValues) {
+		existingUrl = addParamsToUrl(paramaterName, Arrays.asList(paramaterValues), existingUrl);
+		return this;
+	}
 
-    }
+	public URL build() {
+		return existingUrl;
+	}
 
-    private URL addParamsToUrl(Map<String, List<String>> params, URL url) {
-        assert !params.isEmpty();
-        String queryString = url.getQuery();
+	private URL addParamsToUrl(final String paramaterName, final List<String> paramaterValues, final URL existingUrl) {
 
-        queryString = addParamsToQueryString(params, queryString);
+		String queryString = existingUrl.getQuery();
+		queryString = addParamsToQueryString(paramaterName, paramaterValues, queryString);
 
-        try {
-            URI withQueryString = new URI(url.getProtocol(), null, url.getHost(), url.getPort(), url.getPath(), queryString, null);
-            return withQueryString.toURL();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Could not build URL", e);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException("Could not build URL", e);
-        }
-    }
+		try {
+			final URI withQueryString = new URI(existingUrl.getProtocol(), null, existingUrl.getHost(), 
+					existingUrl.getPort(), existingUrl.getPath(), queryString, null);
+			return withQueryString.toURL();
+		} catch (MalformedURLException e) {
+			throw new IllegalArgumentException(String.format("Could not add parameter with name '%s' and values '%s'",
+					paramaterName, paramaterValues), e);
+		} catch (URISyntaxException e) {
+			throw new IllegalArgumentException(String.format("Could not add parameter with name '%s' and values '%s'",
+					paramaterName, paramaterValues), e);
+		}
+	}
 
-    private String addParamsToQueryString(Map<String,List<String>> params, String queryString) {
-        String returnQueryString = (queryString==null || "".equals(queryString.trim()))? "":queryString+"&";
-        Collection<String> tuples = new ArrayList<String>();
-        for (String key:params.keySet()){
-            tuples.add(String.format("%s=%s", key, join(params.get(key), ",")));
-        }
-        return returnQueryString + join(tuples, "&");
-    }
+	private String addParamsToQueryString(final String paramaterName, final List<String> paramaterValues,
+			final String existingQueryString) {
+		String queryString = "";
+		if (existingQueryString != null && existingQueryString.trim().length() > 0) {
+			queryString = existingQueryString + "&";
+		}
+		queryString += String.format("%s=%s", paramaterName, join(paramaterValues, ","));
+		return queryString;
+	}
 
-    public String join(Collection coll, String separator){
-        StringBuilder builder = new StringBuilder();
-        Iterator iterator = coll.iterator();
-        while (iterator.hasNext()) {
-            builder.append(iterator.next());
-            if (iterator.hasNext()) {
-                builder.append(separator);
-            }
-        }
-        return builder.toString();
-    }
-
-    public QueryStringBuilder addParam(String key, String... values){
-        params.put(key, Arrays.asList(values));
-        return this;
-    }
+	public String join(final Collection<String> joinThese, final String seperatingThemWithThis) {
+		final StringBuilder builder = new StringBuilder();
+		final Iterator<String> iterator = joinThese.iterator();
+		while (iterator.hasNext()) {
+			builder.append(iterator.next());
+			if (iterator.hasNext()) {
+				builder.append(seperatingThemWithThis);
+			}
+		}
+		return builder.toString();
+	}
 }

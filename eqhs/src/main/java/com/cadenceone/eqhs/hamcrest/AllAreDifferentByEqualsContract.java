@@ -1,6 +1,6 @@
 package com.cadenceone.eqhs.hamcrest;
 
-import com.cadenceone.eqhs.MultipleEqualsAndHashcodeContractChecker;
+import com.cadenceone.eqhs.MultipleEqualsAndHashCodeContractChecker;
 import org.hamcrest.Description;
 import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
@@ -13,7 +13,7 @@ public class AllAreDifferentByEqualsContract<E> extends TypeSafeMatcher<Collecti
 
     @Override
     protected boolean matchesSafely(Collection<E> item) {
-        return new MultipleEqualsAndHashcodeContractChecker(item).allAreDifferentByEqualsContract();
+        return new MultipleEqualsAndHashCodeContractChecker(item).allAreDifferentByEqualsContract();
     }
 
     @Override

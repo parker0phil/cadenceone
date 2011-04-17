@@ -7,7 +7,7 @@ import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
-import com.cadenceone.eqhs.MultipleEqualsAndHashcodeContractChecker;
+import com.cadenceone.eqhs.MultipleEqualsAndHashCodeContractChecker;
 
 
 public class AllAreSameByEqualsContract<E> extends TypeSafeMatcher<Collection<E>>{
@@ -17,12 +17,12 @@ public class AllAreSameByEqualsContract<E> extends TypeSafeMatcher<Collection<E>
 
     @Override
     protected boolean matchesSafely(Collection<E> item) {
-        return new MultipleEqualsAndHashcodeContractChecker(item).allAreSameByEqualsContract();
+        return new MultipleEqualsAndHashCodeContractChecker(item).allAreSameByEqualsContract();
     }
 
     @Override
     protected void describeMismatchSafely(Collection<E> item, Description mismatchDescription) {
-        mismatchDescription.appendText("at least two objects are NOT equal or have different hashcodes, should be equal and have same hashcode");
+        mismatchDescription.appendText("at least two objects are NOT equal or have different hashCodes, should be equal AND have same hashCode");
     }
 
     /**

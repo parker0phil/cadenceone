@@ -19,7 +19,12 @@ public class MutualEqualsAndHashCodeContractChecker {
     }
     
     private boolean areSameByEqualsMethod() {
-        return leftObject.equals(rightObject) && rightObject.equals(leftObject);
+        return  !leftObject.equals(null) &&
+                !rightObject.equals(null) &&
+                !leftObject.equals(new DifferentObject()) &&
+                !rightObject.equals(new DifferentObject()) &&
+                leftObject.equals(rightObject) &&
+                rightObject.equals(leftObject);
     }
     
     private boolean haveSameHashCode() {
@@ -28,5 +33,8 @@ public class MutualEqualsAndHashCodeContractChecker {
 
     public boolean haveDifferentHashCodes() {
         return !haveSameHashCode();
+    }
+
+    private class DifferentObject {
     }
 }

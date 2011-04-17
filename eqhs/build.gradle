@@ -1,7 +1,8 @@
 dependencies {
 	compile 'org.hamcrest:hamcrest-core:1.2'
-	
-    	testCompile 'junit:junit-dep:4.8.1'	
+
+    testCompile 'commons-lang:commons-lang:2.4'
+    testCompile 'junit:junit-dep:4.8.1'
 	testCompile 'org.hamcrest:hamcrest-library:1.2'
 	testCompile 'org.mockito:mockito-core:1.8.5'
 }
