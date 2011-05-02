@@ -1,0 +1,25 @@
+repositories {
+   	mavenRepo name: "eviware", urls: "http://www.eviware.com/repository/maven2"
+   	mavenRepo name: "codehaus", urls: "http://dist.codehaus.org"
+  }
+
+dependencies {
+    compile 'eviware:soapui:4.0.0-SNAPSHOT'
+    //SOAPUI transitive!!
+    compile 'eviware:soapui-xmlbeans:4.0.0-SNAPSHOT'
+    compile 'xmlbeans:xbean:2.3.0'
+    compile 'wsdl4j:wsdl4j:1.6.2'
+    compile 'commons-cli:commons-cli:1.0'
+    compile fileTree(dir:'lib')
+	compile 'org.bouncycastle:bcprov-jdk16:1.45'
+	compile 'stax:stax-api:1.0.1'
+	compile 'xerces:xercesImpl:2.9.1'		
+    compile 'commons-httpclient:commons-httpclient:3.0.1'
+    compile 'log4j:log4j:1.2.8'
+    compile 'commons-beanutils:commons-beanutils:1.8.3'
+    compile 'ognl:ognl:2.6.9'
+    compile 'milyn:milyn-commons:1.0'
+    testCompile 'junit:junit-dep:4.8.1'
+    testCompile 'org.hamcrest:hamcrest-library:1.2'
+    
+}

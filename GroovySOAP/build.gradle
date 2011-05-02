@@ -1,0 +1,12 @@
+apply plugin: 'groovy'
+repositories {
+   	mavenRepo name: "eviware", urls: "http://www.eviware.com/repository/maven2"
+   	mavenRepo name: "codehaus", urls: "http://dist.codehaus.org"
+    mavenRepo name: "codehausSNAPSHOTs", urls: "http://snapshots.repository.codehaus.org"
+  }
+dependencies {
+    compile project(':SimpleSOAP')
+    testCompile 'org.spockframework:spock-core:0.5-groovy-1.8'
+    testCompile 'cglib:cglib-nodep:2.2'
+    testCompile 'org.objenesis:objenesis:1.2'
+}

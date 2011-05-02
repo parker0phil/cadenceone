@@ -1,0 +1,124 @@
+2011-04-28 00:21:47,480 WARN  [SoapUI] Missing folder [/home/ee/projects/cadenceone/SimpleSOAP/./ext] for external libraries
+2011-04-28 00:21:47,679 INFO  [DefaultSoapUICore] initialized soapui-settings from [/home/ee/soapui-settings.xml]
+2011-04-28 00:21:48,729 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
+2011-04-28 00:21:48,779 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
+2011-04-28 00:21:48,781 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
+2011-04-28 00:21:48,782 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
+2011-04-28 00:21:48,783 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
+2011-04-28 00:21:48,784 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
+2011-04-28 00:21:48,786 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/soapEnvelope.xsd with targetNamespace http://schemas.xmlsoap.org/soap/envelope/
+2011-04-28 00:21:48,793 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/soapEncoding.xsd with targetNamespace http://schemas.xmlsoap.org/soap/encoding/
+2011-04-28 00:21:48,795 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/soapEnvelope12.xsd with targetNamespace http://www.w3.org/2003/05/soap-envelope
+2011-04-28 00:21:48,802 INFO  [SchemaUtils] Added default schema from file:/home/ee/.gradle/cache/eviware/soapui/jars/soapui-4.0.0-SNAPSHOT.jar!/com/eviware/soapui/resources/xsds/soapEncoding12.xsd with targetNamespace http://www.w3.org/2003/05/soap-encoding
+2011-04-28 00:21:50,048 INFO  [SchemaUtils] Loading schema types from [http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl]
+2011-04-28 00:21:50,048 INFO  [SchemaUtils] Getting schema http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl
+2011-04-28 00:21:50,318 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:50,323 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:50,323 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:50,323 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:50,324 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:50,324 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:50,351 INFO  [Soap12HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:50,393 INFO  [Soap12HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:50,406 INFO  [Soap12HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:50,406 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:50,407 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:50,407 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:50,407 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:50,455 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:50,455 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:50,455 INFO  [Soap11HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:50,456 INFO  [Soap11HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:50,457 INFO  [Soap11HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:50,457 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:50,457 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:50,458 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:50,458 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:50,459 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:50,459 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:50,459 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:50,459 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:51,437 INFO  [SchemaUtils] Loading schema types from [http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl]
+2011-04-28 00:21:51,438 INFO  [SchemaUtils] Getting schema http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl
+2011-04-28 00:21:51,561 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:51,562 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:51,562 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:51,563 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:51,563 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:51,563 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:51,564 INFO  [Soap12HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:51,566 INFO  [Soap12HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:51,567 INFO  [Soap12HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:51,569 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:51,571 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:51,574 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:51,575 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:51,575 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:51,575 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:51,576 INFO  [Soap11HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:51,577 INFO  [Soap11HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:51,577 INFO  [Soap11HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:51,578 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:51,578 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:51,578 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:51,579 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:51,580 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:51,580 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:51,580 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:51,580 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:52,490 INFO  [SchemaUtils] Loading schema types from [http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl]
+2011-04-28 00:21:52,490 INFO  [SchemaUtils] Getting schema http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:52,597 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:52,598 INFO  [Soap12HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:52,599 INFO  [Soap12HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:52,599 INFO  [Soap12HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:52,600 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:52,600 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:52,600 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:52,601 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:52,601 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:52,602 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:52,602 INFO  [Soap11HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:52,602 INFO  [Soap11HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:52,603 INFO  [Soap11HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:52,603 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:52,603 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:52,604 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:52,604 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:52,604 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:52,604 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:52,604 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:52,605 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:53,896 INFO  [SchemaUtils] Loading schema types from [http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl]
+2011-04-28 00:21:53,896 INFO  [SchemaUtils] Getting schema http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:53,994 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap12
+2011-04-28 00:21:53,995 INFO  [Soap12HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:53,995 INFO  [Soap12HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:53,996 INFO  [Soap12HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:53,996 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:53,996 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:53,996 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:53,997 INFO  [Soap12HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:53,997 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:53,997 INFO  [WsdlImporter] Importing binding {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2Soap
+2011-04-28 00:21:53,998 INFO  [Soap11HttpBindingImporter] importing endpoint http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx
+2011-04-28 00:21:53,998 INFO  [Soap11HttpBindingImporter] importing operation GetCountriesAvailable
+2011-04-28 00:21:53,998 INFO  [Soap11HttpBindingImporter] importing operation GetHolidayDate
+2011-04-28 00:21:53,999 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysAvailable
+2011-04-28 00:21:53,999 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForDateRange
+2011-04-28 00:21:53,999 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForMonth
+2011-04-28 00:21:54,000 INFO  [Soap11HttpBindingImporter] importing operation GetHolidaysForYear
+2011-04-28 00:21:54,000 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:54,000 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpPost
+2011-04-28 00:21:54,000 INFO  [WsdlImporter] Finding importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
+2011-04-28 00:21:54,000 INFO  [WsdlImporter] Missing importer for {http://www.holidaywebservice.com/HolidayService_v2/}HolidayService2HttpGet
