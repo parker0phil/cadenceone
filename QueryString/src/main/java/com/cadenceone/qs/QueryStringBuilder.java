@@ -13,10 +13,19 @@ public class QueryStringBuilder {
 	public QueryStringBuilder(final URL existingUrl) {
 		this.existingUrl = existingUrl;
 	}
-
-	public QueryStringBuilder addParam(final String paramaterName, final String... paramaterValues) {
-		existingUrl = addParamsToUrl(paramaterName, Arrays.asList(paramaterValues), existingUrl);
+	
+	public QueryStringBuilder addParam(final String parameterName, final String firstParameterValue, final String... remainingParameterValues) {
+		existingUrl = addParamsToUrl(parameterName, toList(firstParameterValue, remainingParameterValues), existingUrl);
 		return this;
+	}
+	
+	private List<String> toList(final String firstString, final String... remainingStrings) {
+		final List<String> strings = new ArrayList<String>();
+		
+		strings.add(firstString);
+		strings.addAll(Arrays.asList(remainingStrings));
+		
+		return strings;
 	}
 
 	public URL build() {
